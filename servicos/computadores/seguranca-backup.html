@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dicas de Computadores - Desbuga</title>
+    <title>Segurança e Backup - Desbuga</title>
     <link rel="stylesheet" href="../../css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
@@ -33,43 +33,43 @@
             font-size: 1.2rem;
         }
 
-        .servicos-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            padding: 2rem 5%;
-        }
-
-        .servico-card {
+        .dica-card {
             background: var(--card-bg);
             border-radius: 15px;
             padding: 2rem;
-            text-align: center;
+            margin-bottom: 2rem;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
             transition: transform 0.3s ease;
-            text-decoration: none;
-            color: var(--text-color);
         }
 
-        .servico-card:hover {
+        .dica-card:hover {
             transform: translateY(-5px);
         }
 
-        .servico-card i {
-            font-size: 2.5rem;
+        .dica-card h3 {
             color: var(--primary-color);
             margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
         }
 
-        .servico-card h3 {
+        .dica-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .dica-card li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .dica-card li:before {
+            content: "•";
             color: var(--primary-color);
-            margin-bottom: 1rem;
-        }
-
-        .servico-card p {
-            color: var(--text-color);
-            font-size: 0.9rem;
-            line-height: 1.5;
+            position: absolute;
+            left: 0;
         }
 
         .search-container {
@@ -159,11 +159,6 @@
                 transform: translateX(-50%) translateY(-2px);
             }
 
-            .servicos-grid {
-                grid-template-columns: 1fr;
-                padding: 1rem;
-            }
-
             .search-container {
                 margin: 1rem 0;
                 width: 100%;
@@ -203,48 +198,76 @@
         </nav>
     </header>
 
-    <main style="margin-top: 100px;">
-        <h1 style="text-align: center; margin-bottom: 3rem; font-size: 2.5rem;">Dicas e Tutoriais para Computadores</h1>
+    <main style="margin-top: 100px; padding: 2rem 5%;">
+        <h1 style="text-align: center; margin-bottom: 3rem; font-size: 2.5rem;">Segurança e Backup</h1>
         
-        <div class="servicos-grid">
-            <a href="computadores/manutencao-basica.html" class="servico-card">
-                <i class="fas fa-tools"></i>
-                <h3>Manutenção Básica</h3>
-                <p>Dicas essenciais para manter seu computador funcionando perfeitamente</p>
-            </a>
-
-            <a href="computadores/otimizacao-sistema.html" class="servico-card">
-                <i class="fas fa-tachometer-alt"></i>
-                <h3>Otimização do Sistema</h3>
-                <p>Melhore a performance e velocidade do seu computador</p>
-            </a>
-
-            <a href="computadores/hardware-upgrades.html" class="servico-card">
-                <i class="fas fa-microchip"></i>
-                <h3>Hardware e Upgrades</h3>
-                <p>Guia completo para melhorar e atualizar seu hardware</p>
-            </a>
-
-            <a href="computadores/seguranca-backup.html" class="servico-card">
-                <i class="fas fa-shield-alt"></i>
-                <h3>Segurança e Backup</h3>
-                <p>Proteja seus dados e mantenha backups seguros</p>
-            </a>
-
-            <a href="computadores/redes-internet.html" class="servico-card">
-                <i class="fas fa-wifi"></i>
-                <h3>Redes e Internet</h3>
-                <p>Configure e otimize sua conexão de rede</p>
-            </a>
-
-            <a href="computadores/solucao-problemas.html" class="servico-card">
-                <i class="fas fa-bug"></i>
-                <h3>Solução de Problemas</h3>
-                <p>Resolva problemas comuns do seu computador</p>
-            </a>
+        <div class="dica-card">
+            <h3><i class="fas fa-shield-alt"></i> Proteção Básica</h3>
+            <ul>
+                <li>Instale e mantenha um antivírus atualizado</li>
+                <li>Ative o firewall do Windows</li>
+                <li>Mantenha o sistema operacional atualizado</li>
+                <li>Use senhas fortes e únicas</li>
+                <li>Ative a autenticação em dois fatores</li>
+            </ul>
         </div>
 
-        <a href="../servicos.html" class="voltar-btn">
+        <div class="dica-card">
+            <h3><i class="fas fa-cloud"></i> Backup na Nuvem</h3>
+            <ul>
+                <li>Use serviços como Google Drive ou OneDrive</li>
+                <li>Configure sincronização automática</li>
+                <li>Mantenha cópias de arquivos importantes</li>
+                <li>Verifique o espaço disponível</li>
+                <li>Configure backup de fotos e documentos</li>
+            </ul>
+        </div>
+
+        <div class="dica-card">
+            <h3><i class="fas fa-hdd"></i> Backup Local</h3>
+            <ul>
+                <li>Use HDs externos para backup</li>
+                <li>Configure backup automático do Windows</li>
+                <li>Mantenha múltiplas cópias</li>
+                <li>Armazene em local seguro</li>
+                <li>Faça backup regularmente</li>
+            </ul>
+        </div>
+
+        <div class="dica-card">
+            <h3><i class="fas fa-lock"></i> Criptografia</h3>
+            <ul>
+                <li>Ative a criptografia de disco (BitLocker)</li>
+                <li>Proteja arquivos sensíveis</li>
+                <li>Use VPN para conexões seguras</li>
+                <li>Criptografe backups externos</li>
+                <li>Proteja senhas e dados pessoais</li>
+            </ul>
+        </div>
+
+        <div class="dica-card">
+            <h3><i class="fas fa-user-shield"></i> Privacidade</h3>
+            <ul>
+                <li>Configure as configurações de privacidade</li>
+                <li>Limpe cookies e cache regularmente</li>
+                <li>Use navegadores com proteção de rastreamento</li>
+                <li>Revise permissões de aplicativos</li>
+                <li>Proteja dados pessoais</li>
+            </ul>
+        </div>
+
+        <div class="dica-card">
+            <h3><i class="fas fa-exclamation-triangle"></i> Recuperação</h3>
+            <ul>
+                <li>Crie pontos de restauração do sistema</li>
+                <li>Mantenha mídia de recuperação</li>
+                <li>Documente senhas importantes</li>
+                <li>Teste a recuperação periodicamente</li>
+                <li>Tenha um plano de contingência</li>
+            </ul>
+        </div>
+
+        <a href="../computadores.html" class="voltar-btn">
             <i class="fas fa-arrow-left"></i>
             <span>Voltar</span>
         </a>

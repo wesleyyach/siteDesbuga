@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solução de Problemas - Desbuga</title>
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .voltar-btn {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .voltar-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(0,0,0,0.2);
+        }
+
+        .voltar-btn i {
+            font-size: 1.2rem;
+        }
+
+        .dica-card {
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .dica-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .dica-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .dica-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .dica-card li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .dica-card li:before {
+            content: "•";
+            color: var(--primary-color);
+            position: absolute;
+            left: 0;
+        }
+
+        @media (max-width: 768px) {
+            .voltar-btn {
+                bottom: 80px;
+                left: 50%;
+                transform: translateX(-50%);
+                padding: 0.8rem 1.5rem;
+            }
+
+            .voltar-btn:hover {
+                transform: translateX(-50%) translateY(-2px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="../../img/logoDesbuga.png" alt="Desbuga Logo" class="logo-img">
+            </div>
+            <ul class="nav-links">
+                <li><a href="../../index.html#inicio">Início</a></li>
+                <li><a href="../../index.html#servicos">Serviços</a></li>
+                <li><a href="../../index.html#sobre">Sobre</a></li>
+                <li><a href="../../index.html#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main style="margin-top: 100px; padding: 2rem 5%;">
+        <h1 style="text-align: center; margin-bottom: 3rem; font-size: 2.5rem;">Solução de Problemas</h1>
+        
+        <div class="dica-card">
+            <h3><i class="fas fa-desktop"></i> Problemas de Inicialização</h3>
+            <ul>
+                <li>Verifique a conexão de energia</li>
+                <li>Teste a fonte de alimentação</li>
+                <li>Verifique a memória RAM</li>
+                <li>Use o modo de segurança</li>
+                <li>Verifique o disco rígido</li>
+            </ul>
+        </div>
+
+        <div class="dica-card">
+            <h3><i class="fas fa-exclamation-circle"></i> Erros do Sistema</h3>
+            <ul>
+                <li>Verifique o log de eventos</li>
+                <li>Atualize os drivers</li>
+                <li>Execute o SFC e DISM</li>
+                <li>Verifique arquivos corrompidos</li>
+                <li>Faça restauração do sistema</li>
+            </ul>
+        </div>
+
+        <div class="dica-card">
+            <h3><i class="fas fa-tachometer-alt"></i> Problemas de Performance</h3>
+            <ul>
+                <li>Monitore o uso de CPU e RAM</li>
+                <li>Verifique processos em segundo plano</li>
+                <li>Limpe arquivos temporários</li>
+                <li>Desfragmente o disco (HD)</li>
+                <li>Verifique a temperatura</li>
+            </ul>
+        </div>
+
+        <div class="dica-card">
+            <h3><i class="fas fa-wifi"></i> Problemas de Rede</h3>
+            <ul>
+                <li>Reinicie o roteador</li>
+                <li>Verifique as configurações de IP</li>
+                <li>Teste a conexão de rede</li>
+                <li>Verifique o firewall</li>
+                <li>Atualize os drivers de rede</li>
+            </ul>
+        </div>
+
+        <div class="dica-card">
+            <h3><i class="fas fa-bug"></i> Problemas de Software</h3>
+            <ul>
+                <li>Reinstale o programa</li>
+                <li>Verifique compatibilidade</li>
+                <li>Execute como administrador</li>
+                <li>Verifique atualizações</li>
+                <li>Limpe o cache do programa</li>
+            </ul>
+        </div>
+
+        <div class="dica-card">
+            <h3><i class="fas fa-tools"></i> Manutenção Preventiva</h3>
+            <ul>
+                <li>Faça backup regularmente</li>
+                <li>Mantenha o sistema atualizado</li>
+                <li>Limpe o computador fisicamente</li>
+                <li>Monitore a saúde do disco</li>
+                <li>Faça manutenção regular</li>
+            </ul>
+        </div>
+
+        <a href="../computadores.html" class="voltar-btn">
+            <i class="fas fa-arrow-left"></i>
+            <span>Voltar</span>
+        </a>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Desbuga</h3>
+                <p>Soluções tecnológicas para você</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contato</h3>
+                <p>Email: contato@desbuga.com</p>
+                <p>Telefone: (XX) XXXX-XXXX</p>
+            </div>
+            <div class="footer-section">
+                <h3>Redes Sociais</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Desbuga. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <button class="theme-toggle" aria-label="Alternar tema">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <script src="../../js/script.js"></script>
+</body>
+</html> 

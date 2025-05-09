@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dicas de Computadores - Desbuga</title>
+    <title>Manutenção Básica de Computadores - Desbuga</title>
     <link rel="stylesheet" href="../../css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
@@ -33,43 +33,43 @@
             font-size: 1.2rem;
         }
 
-        .servicos-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            padding: 2rem 5%;
-        }
-
-        .servico-card {
+        .dica-card {
             background: var(--card-bg);
             border-radius: 15px;
             padding: 2rem;
-            text-align: center;
+            margin-bottom: 2rem;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
             transition: transform 0.3s ease;
-            text-decoration: none;
-            color: var(--text-color);
         }
 
-        .servico-card:hover {
+        .dica-card:hover {
             transform: translateY(-5px);
         }
 
-        .servico-card i {
-            font-size: 2.5rem;
+        .dica-card h3 {
             color: var(--primary-color);
             margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
         }
 
-        .servico-card h3 {
+        .dica-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .dica-card li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .dica-card li:before {
+            content: "•";
             color: var(--primary-color);
-            margin-bottom: 1rem;
-        }
-
-        .servico-card p {
-            color: var(--text-color);
-            font-size: 0.9rem;
-            line-height: 1.5;
+            position: absolute;
+            left: 0;
         }
 
         .search-container {
@@ -159,11 +159,6 @@
                 transform: translateX(-50%) translateY(-2px);
             }
 
-            .servicos-grid {
-                grid-template-columns: 1fr;
-                padding: 1rem;
-            }
-
             .search-container {
                 margin: 1rem 0;
                 width: 100%;
@@ -203,48 +198,76 @@
         </nav>
     </header>
 
-    <main style="margin-top: 100px;">
-        <h1 style="text-align: center; margin-bottom: 3rem; font-size: 2.5rem;">Dicas e Tutoriais para Computadores</h1>
+    <main style="margin-top: 100px; padding: 2rem 5%;">
+        <h1 style="text-align: center; margin-bottom: 3rem; font-size: 2.5rem;">Manutenção Básica de Computadores</h1>
         
-        <div class="servicos-grid">
-            <a href="computadores/manutencao-basica.html" class="servico-card">
-                <i class="fas fa-tools"></i>
-                <h3>Manutenção Básica</h3>
-                <p>Dicas essenciais para manter seu computador funcionando perfeitamente</p>
-            </a>
-
-            <a href="computadores/otimizacao-sistema.html" class="servico-card">
-                <i class="fas fa-tachometer-alt"></i>
-                <h3>Otimização do Sistema</h3>
-                <p>Melhore a performance e velocidade do seu computador</p>
-            </a>
-
-            <a href="computadores/hardware-upgrades.html" class="servico-card">
-                <i class="fas fa-microchip"></i>
-                <h3>Hardware e Upgrades</h3>
-                <p>Guia completo para melhorar e atualizar seu hardware</p>
-            </a>
-
-            <a href="computadores/seguranca-backup.html" class="servico-card">
-                <i class="fas fa-shield-alt"></i>
-                <h3>Segurança e Backup</h3>
-                <p>Proteja seus dados e mantenha backups seguros</p>
-            </a>
-
-            <a href="computadores/redes-internet.html" class="servico-card">
-                <i class="fas fa-wifi"></i>
-                <h3>Redes e Internet</h3>
-                <p>Configure e otimize sua conexão de rede</p>
-            </a>
-
-            <a href="computadores/solucao-problemas.html" class="servico-card">
-                <i class="fas fa-bug"></i>
-                <h3>Solução de Problemas</h3>
-                <p>Resolva problemas comuns do seu computador</p>
-            </a>
+        <div class="dica-card">
+            <h3><i class="fas fa-broom"></i> Limpeza Física</h3>
+            <ul>
+                <li>Limpe regularmente o teclado e mouse com pano úmido</li>
+                <li>Use ar comprimido para remover poeira das entradas USB e ventiladores</li>
+                <li>Mantenha o monitor limpo com produtos específicos para telas</li>
+                <li>Verifique e limpe os filtros de ar do gabinete</li>
+                <li>Faça limpeza profunda a cada 3-6 meses</li>
+            </ul>
         </div>
 
-        <a href="../servicos.html" class="voltar-btn">
+        <div class="dica-card">
+            <h3><i class="fas fa-temperature-low"></i> Controle de Temperatura</h3>
+            <ul>
+                <li>Mantenha o computador em local bem ventilado</li>
+                <li>Verifique se os ventiladores estão funcionando corretamente</li>
+                <li>Monitore a temperatura do processador e placa de vídeo</li>
+                <li>Evite obstruir as saídas de ar do gabinete</li>
+                <li>Considere usar uma base refrigeradora para notebooks</li>
+            </ul>
+        </div>
+
+        <div class="dica-card">
+            <h3><i class="fas fa-shield-alt"></i> Segurança Básica</h3>
+            <ul>
+                <li>Mantenha o antivírus sempre atualizado</li>
+                <li>Faça backup regular dos seus dados importantes</li>
+                <li>Use senhas fortes e diferentes para cada serviço</li>
+                <li>Ative a autenticação em dois fatores quando possível</li>
+                <li>Mantenha o sistema operacional atualizado</li>
+            </ul>
+        </div>
+
+        <div class="dica-card">
+            <h3><i class="fas fa-hdd"></i> Gerenciamento de Disco</h3>
+            <ul>
+                <li>Faça limpeza regular de arquivos temporários</li>
+                <li>Desinstale programas que não são mais utilizados</li>
+                <li>Use ferramentas de desfragmentação (HDDs)</li>
+                <li>Mantenha pelo menos 20% do disco livre</li>
+                <li>Faça backup regular dos dados importantes</li>
+            </ul>
+        </div>
+
+        <div class="dica-card">
+            <h3><i class="fas fa-plug"></i> Cuidados com Energia</h3>
+            <ul>
+                <li>Use estabilizador ou nobreak de qualidade</li>
+                <li>Evite conectar muitos dispositivos em uma mesma tomada</li>
+                <li>Desligue o computador corretamente</li>
+                <li>Verifique se os cabos estão em bom estado</li>
+                <li>Mantenha a fonte de alimentação limpa e ventilada</li>
+            </ul>
+        </div>
+
+        <div class="dica-card">
+            <h3><i class="fas fa-tools"></i> Manutenção Preventiva</h3>
+            <ul>
+                <li>Faça verificação regular do sistema</li>
+                <li>Monitore o desempenho do computador</li>
+                <li>Verifique a integridade do disco rígido</li>
+                <li>Mantenha os drivers atualizados</li>
+                <li>Faça testes periódicos de memória RAM</li>
+            </ul>
+        </div>
+
+        <a href="../computadores.html" class="voltar-btn">
             <i class="fas fa-arrow-left"></i>
             <span>Voltar</span>
         </a>

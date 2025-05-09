@@ -70,10 +70,21 @@ document.querySelectorAll('.servico-card').forEach(card => {
 const themeToggle = document.querySelector('.theme-toggle');
 const html = document.documentElement;
 
+// Recupera o tema salvo ou usa o tema claro como padrão
+const savedTheme = localStorage.getItem('theme') || 'light';
+html.setAttribute('data-theme', savedTheme);
+
+// Atualiza o ícone inicial baseado no tema salvo
+const icon = themeToggle.querySelector('i');
+icon.className = savedTheme === 'light' ? 'fas fa-moon' : 'fas fa-sun';
+
 themeToggle.addEventListener('click', () => {
     const currentTheme = html.getAttribute('data-theme');
     const newTheme = currentTheme === 'light' ? 'dark' : 'light';
     html.setAttribute('data-theme', newTheme);
+    
+    // Salva a preferência do tema
+    localStorage.setItem('theme', newTheme);
     
     // Atualiza o ícone
     const icon = themeToggle.querySelector('i');
