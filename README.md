@@ -22,21 +22,6 @@ O site está hospedado no GitHub Pages e pode ser acessado em:
 - JavaScript
 - Font Awesome (para ícones)
 
-## 📦 Estrutura do Projeto
-
-```
-siteDesbuga/
-├── css/
-│   └── styles.css
-├── js/
-│   └── script.js
-├── img/
-│   ├── logoDesbuga.png
-│   └── logoDesbugaSemFundo.png
-├── index.html
-└── README.md
-```
-
 ## 🎨 Recursos Visuais
 
 - Logo com fundo para a navbar

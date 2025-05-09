@@ -3,58 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Câmeras - Desbuga</title>
-    <link rel="stylesheet" href="/css/styles.css">
+    <title>Dicas de Manutenção - Desbuga</title>
+    <link rel="stylesheet" href="../../css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        .categoria-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            padding: 2rem 5%;
-        }
-
-        .categoria-card {
+        .dica-card {
             background: var(--card-bg);
             border-radius: 10px;
-            padding: 2rem;
-            text-align: center;
-            transition: transform 0.3s;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
 
-        .categoria-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .categoria-card i {
-            font-size: 3rem;
+        .dica-card h3 {
             color: var(--primary-color);
             margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
         }
 
-        .categoria-card h3 {
-            color: var(--text-color);
-            margin-bottom: 1rem;
+        .dica-card ul {
+            list-style: none;
+            padding: 0;
         }
 
-        .categoria-card p {
-            color: var(--text-secondary);
-            margin-bottom: 1.5rem;
+        .dica-card li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
         }
 
-        .categoria-card a {
-            display: inline-block;
-            padding: 0.8rem 1.5rem;
+        .dica-card li:before {
+            content: "•";
+            color: var(--primary-color);
+            position: absolute;
+            left: 0;
+        }
+
+        .voltar-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
             background: var(--primary-color);
             color: white;
-            text-decoration: none;
+            padding: 0.8rem 1.5rem;
             border-radius: 5px;
-            transition: background-color 0.3s;
+            text-decoration: none;
+            margin-top: 2rem;
+            transition: transform 0.2s;
         }
 
-        .categoria-card a:hover {
-            background: var(--primary-dark);
+        .voltar-btn:hover {
+            transform: translateY(-2px);
         }
 
         .search-container {
@@ -123,9 +124,15 @@
         }
 
         @media (max-width: 768px) {
-            .categoria-grid {
-                grid-template-columns: 1fr;
-                padding: 1rem;
+            .voltar-btn {
+                bottom: 80px;
+                left: 50%;
+                transform: translateX(-50%);
+                padding: 0.8rem 1.5rem;
+            }
+
+            .voltar-btn:hover {
+                transform: translateX(-50%) translateY(-2px);
             }
 
             .search-container {
@@ -147,13 +154,13 @@
     <header>
         <nav class="navbar">
             <div class="logo">
-                <img src="../img/logoDesbuga.png" alt="Desbuga Logo" class="logo-img">
+                <img src="../../img/logoDesbuga.png" alt="Desbuga Logo" class="logo-img">
             </div>
             <ul class="nav-links">
-                <li><a href="../index.html#inicio">Início</a></li>
-                <li><a href="../index.html#servicos">Serviços</a></li>
-                <li><a href="../index.html#sobre">Sobre</a></li>
-                <li><a href="../index.html#contato">Contato</a></li>
+                <li><a href="../../index.html#inicio">Início</a></li>
+                <li><a href="../../index.html#servicos">Serviços</a></li>
+                <li><a href="../../index.html#sobre">Sobre</a></li>
+                <li><a href="../../index.html#contato">Contato</a></li>
                 <li>
                     <div class="search-container">
                         <input type="text" class="search-input" placeholder="Pesquisar...">
@@ -167,52 +174,57 @@
         </nav>
     </header>
 
-    <main style="margin-top: 100px;">
-        <h1 style="text-align: center; margin-bottom: 3rem; font-size: 2.5rem;">Câmeras</h1>
+    <main style="margin-top: 100px; padding: 2rem 5%;">
+        <h1 style="text-align: center; margin-bottom: 3rem; font-size: 2.5rem;">Dicas e Tutoriais de Manutenção</h1>
 
-        <div class="categoria-grid">
-            <div class="categoria-card">
-                <i class="fas fa-camera"></i>
-                <h3>DSLR</h3>
-                <p>Dicas e tutoriais para câmeras DSLR</p>
-                <a href="cameras/dslr.html">Ver Dicas</a>
-            </div>
-
-            <div class="categoria-card">
-                <i class="fas fa-camera-retro"></i>
-                <h3>Mirrorless</h3>
-                <p>Dicas e tutoriais para câmeras mirrorless</p>
-                <a href="cameras/mirrorless.html">Ver Dicas</a>
-            </div>
-
-            <div class="categoria-card">
-                <i class="fas fa-video"></i>
-                <h3>Filmagem</h3>
-                <p>Dicas e tutoriais para filmagem</p>
-                <a href="cameras/filmagem.html">Ver Dicas</a>
-            </div>
-
-            <div class="categoria-card">
-                <i class="fas fa-image"></i>
-                <h3>Fotografia</h3>
-                <p>Dicas e tutoriais para fotografia</p>
-                <a href="cameras/fotografia.html">Ver Dicas</a>
-            </div>
-
-            <div class="categoria-card">
-                <i class="fas fa-edit"></i>
-                <h3>Edição</h3>
-                <p>Dicas e tutoriais para edição de fotos e vídeos</p>
-                <a href="cameras/edicao.html">Ver Dicas</a>
-            </div>
-
-            <div class="categoria-card">
-                <i class="fas fa-tools"></i>
-                <h3>Manutenção</h3>
-                <p>Cuidados e reparos em geral</p>
-                <a href="cameras/manutencao.html">Ver Dicas</a>
-            </div>
+        <div class="dica-card">
+            <h3><i class="fas fa-tools"></i> Cuidados Físicos</h3>
+            <ul>
+                <li>Use capa protetora</li>
+                <li>Mantenha a tela limpa</li>
+                <li>Evite exposição à água</li>
+                <li>Proteja contra quedas</li>
+                <li>Limpe as entradas de conexão</li>
+            </ul>
         </div>
+
+        <div class="dica-card">
+            <h3><i class="fas fa-mobile-alt"></i> Manutenção Preventiva</h3>
+            <ul>
+                <li>Faça backup regular</li>
+                <li>Atualize o sistema</li>
+                <li>Limpe o cache</li>
+                <li>Gerencie o armazenamento</li>
+                <li>Monitore a temperatura</li>
+            </ul>
+        </div>
+
+        <div class="dica-card">
+            <h3><i class="fas fa-exclamation-circle"></i> Problemas Comuns</h3>
+            <ul>
+                <li>Tela quebrada</li>
+                <li>Bateria com defeito</li>
+                <li>Problemas de carregamento</li>
+                <li>Falhas no sistema</li>
+                <li>Problemas de conectividade</li>
+            </ul>
+        </div>
+
+        <div class="dica-card">
+            <h3><i class="fas fa-wrench"></i> Reparos</h3>
+            <ul>
+                <li>Troca de tela</li>
+                <li>Substituição de bateria</li>
+                <li>Reparo de conectores</li>
+                <li>Manutenção de câmera</li>
+                <li>Reparo de alto-falante</li>
+            </ul>
+        </div>
+
+        <a href="../smartphones.html" class="voltar-btn">
+            <i class="fas fa-arrow-left"></i>
+            <span>Voltar</span>
+        </a>
     </main>
 
     <footer>
@@ -244,39 +256,39 @@
         <i class="fas fa-moon"></i>
     </button>
 
-    <script src="../js/script.js"></script>
+    <script src="../../js/script.js"></script>
     <script>
         // Dados de exemplo para a pesquisa
         const searchData = [
             {
-                title: "DSLR",
-                description: "Dicas e tutoriais para câmeras DSLR",
-                url: "cameras/dslr.html"
+                title: "Android",
+                description: "Otimização e gerenciamento de smartphones Android",
+                url: "smartphones/android.html"
             },
             {
-                title: "Mirrorless",
-                description: "Dicas e tutoriais para câmeras mirrorless",
-                url: "cameras/mirrorless.html"
+                title: "iOS",
+                description: "Dicas e tutoriais para iPhone",
+                url: "smartphones/ios.html"
             },
             {
-                title: "Filmagem",
-                description: "Dicas e tutoriais para filmagem",
-                url: "cameras/filmagem.html"
+                title: "Bateria",
+                description: "Cuidados e otimização de bateria",
+                url: "smartphones/bateria.html"
             },
             {
-                title: "Fotografia",
-                description: "Dicas e tutoriais para fotografia",
-                url: "cameras/fotografia.html"
+                title: "Segurança",
+                description: "Proteção e segurança de dados",
+                url: "smartphones/seguranca.html"
             },
             {
-                title: "Edição",
-                description: "Dicas e tutoriais para edição de fotos e vídeos",
-                url: "cameras/edicao.html"
+                title: "Câmera",
+                description: "Dicas de fotografia e configurações",
+                url: "smartphones/camera.html"
             },
             {
                 title: "Manutenção",
-                description: "Cuidados e reparos em geral",
-                url: "cameras/manutencao.html"
+                description: "Cuidados físicos e reparos",
+                url: "smartphones/manutencao.html"
             }
         ];
 

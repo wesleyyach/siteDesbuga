@@ -165,15 +165,16 @@ body::before {
     transform: scale(1.05);
 }
 
-.logo-img {
+.logo img {
     height: 50px;
     width: auto;
     filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
     transition: all 0.3s ease;
 }
 
-.logo:hover .logo-img {
+.logo:hover img {
     filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
+    transform: scale(1.05);
 }
 
 .nav-links {
@@ -295,6 +296,10 @@ body::before {
         font-size: 1.5rem;
         cursor: pointer;
         padding: 0.5rem;
+    }
+
+    .logo img {
+        height: 40px;
     }
 }
 
