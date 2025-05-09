@@ -2,6 +2,11 @@
 
 Site institucional da Desbuga, uma plataforma dedicada a oferecer soluções tecnológicas e suporte técnico para diversos problemas relacionados à tecnologia.
 
+## 🌐 Site Online
+
+O site está hospedado no GitHub Pages e pode ser acessado em:
+[https://wesleyyach.github.io/siteDesbuga](https://wesleyyach.github.io/siteDesbuga)
+
 ## 🚀 Funcionalidades
 
 - Design moderno e responsivo
@@ -59,6 +64,6 @@ git clone https://github.com/wesleyyach/siteDesbuga.git
 
 Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
-## �� Autor
+## 🎨 Autor
 
 Wesley Yach 
