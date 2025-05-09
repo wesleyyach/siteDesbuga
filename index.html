@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +8,28 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <div class="particles">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
     <header>
         <nav class="navbar">
             <div class="logo">
@@ -26,44 +48,60 @@
         <section id="hero">
             <div class="hero-content">
                 <img src="img/logoDesbugaSemFundo.png" alt="Desbuga Logo" class="hero-logo">
-                <h2>Soluções Tecnológicas ao seu Alcance</h2>
-                <p>Resolvemos seus problemas tecnológicos com eficiência e qualidade</p>
-                <button class="cta-button">Solicitar Ajuda</button>
+                <h2>Conhecimento Tecnológico ao seu Alcance</h2>
+                <p>Aprenda a resolver seus problemas tecnológicos com nossas dicas e tutoriais gratuitos</p>
+                <button class="cta-button">Explorar Dicas</button>
             </div>
         </section>
 
         <section id="servicos">
-            <h2>Nossos Serviços</h2>
+            <h2>Áreas de Conhecimento</h2>
             <div class="servicos-grid">
-                <div class="servico-card">
-                    <i class="fas fa-laptop-code"></i>
-                    <h3>Suporte Técnico</h3>
-                    <p>Resolução de problemas em computadores e notebooks</p>
-                </div>
-                <div class="servico-card">
+                <a href="servicos/computadores.html" class="servico-card">
+                    <i class="fas fa-laptop"></i>
+                    <h3>Computadores</h3>
+                    <p>Dicas de manutenção, otimização e solução de problemas em desktops e notebooks</p>
+                </a>
+                <a href="servicos/consoles.html" class="servico-card">
+                    <i class="fas fa-gamepad"></i>
+                    <h3>Consoles</h3>
+                    <p>Tutoriais para PlayStation, Xbox, Nintendo e outros consoles de jogos</p>
+                </a>
+                <a href="servicos/smartphones.html" class="servico-card">
                     <i class="fas fa-mobile-alt"></i>
                     <h3>Smartphones</h3>
-                    <p>Conserto e manutenção de dispositivos móveis</p>
-                </div>
-                <div class="servico-card">
-                    <i class="fas fa-network-wired"></i>
-                    <h3>Redes</h3>
-                    <p>Configuração e solução de problemas de rede</p>
-                </div>
+                    <p>Guias para manutenção, otimização e solução de problemas em celulares</p>
+                </a>
+                <a href="servicos/eletrodomesticos.html" class="servico-card">
+                    <i class="fas fa-home"></i>
+                    <h3>Eletrodomésticos</h3>
+                    <p>Dicas de manutenção e cuidados com geladeiras, máquinas de lavar e outros</p>
+                </a>
+                <a href="servicos/cameras.html" class="servico-card">
+                    <i class="fas fa-camera"></i>
+                    <h3>Câmeras</h3>
+                    <p>Tutoriais para câmeras fotográficas, filmadoras e equipamentos de vídeo</p>
+                </a>
+                <a href="servicos/eletronicos.html" class="servico-card">
+                    <i class="fas fa-plug"></i>
+                    <h3>Eletrônicos</h3>
+                    <p>Guias para TVs, áudio, vídeo e outros equipamentos eletrônicos</p>
+                </a>
             </div>
         </section>
 
         <section id="sobre">
             <h2>Sobre o Desbuga</h2>
-            <p>Somos uma equipe especializada em resolver problemas tecnológicos, oferecendo soluções rápidas e eficientes para suas necessidades.</p>
+            <p>Somos uma comunidade dedicada a compartilhar conhecimento tecnológico de forma gratuita e acessível. Nossa missão é ajudar você a resolver seus problemas tecnológicos através de dicas, tutoriais e guias práticos.</p>
         </section>
 
         <section id="contato">
             <h2>Entre em Contato</h2>
+            <p style="text-align: center; margin-bottom: 2rem;">Tem alguma dúvida ou sugestão? Entre em contato conosco!</p>
             <form class="contact-form">
                 <input type="text" placeholder="Seu Nome" required>
                 <input type="email" placeholder="Seu E-mail" required>
-                <textarea placeholder="Descreva seu problema" required></textarea>
+                <textarea placeholder="Sua mensagem ou dúvida" required></textarea>
                 <button type="submit">Enviar</button>
             </form>
         </section>
@@ -93,6 +131,10 @@
             <p>&copy; 2025 Desbuga. Todos os direitos reservados.</p>
         </div>
     </footer>
+
+    <button class="theme-toggle" aria-label="Alternar tema">
+        <i class="fas fa-moon"></i>
+    </button>
 
     <script src="js/script.js"></script>
 </body>
